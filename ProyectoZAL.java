@@ -16,10 +16,10 @@ public class ProyectoZAL {
         JLabel etiqueta_2 = new JLabel("Nombre completo: ");
         JLabel etiqueta_3 = new JLabel("Teléfono: ");
       
-        etiqueta_2.setBounds(40, 70, 200,30);
-        etiqueta_3.setBounds(40, 70, 200,30);
+        etiqueta_2.setBounds(0, 0, 200,30);
+        etiqueta_3.setBounds(0, 20, 200,30);
        
-     
+        frame.add(etiqueta_2);
         frame.add(etiqueta_3);
  
 
