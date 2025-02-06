@@ -9,5 +9,7 @@ public class PracticaNumeroX {
 
         System.out.println("El numero: " + numero + " tiene " + Integer.toString(numero).length() + " cifras");
 
+        scanner.close();
+
     }
 }
