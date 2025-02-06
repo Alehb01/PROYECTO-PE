@@ -15,12 +15,18 @@ public class ProyectoZAL {
  
         JLabel etiqueta_2 = new JLabel("Nombre completo: ");
         JLabel etiqueta_3 = new JLabel("Teléfono: ");
+        JTextField texto_1 = new JTextField();
+        JTextField texto_2 = new JTextField();
       
-        etiqueta_2.setBounds(0, 0, 200,30);
-        etiqueta_3.setBounds(0, 20, 200,30);
+        etiqueta_2.setBounds(0, 10, 200,30);
+        etiqueta_3.setBounds(0, 50, 200,30);
+        texto_1.setBounds(220, 10, 200, 30);
+        texto_2.setBounds(220, 50, 200, 30);
        
         frame.add(etiqueta_2);
         frame.add(etiqueta_3);
+        frame.add(texto_1);
+        frame.add(texto_2);
  
 
         //hacer la ventana visible
