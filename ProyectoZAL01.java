@@ -8,12 +8,10 @@ import java.util.Queue;
 class Usuario {
     private String nombre;
     private String contraseña;
-    private String email;
 
-    public Usuario(String nombre, String contraseña, String email) {
+    public Usuario(String nombre, String contraseña) {
         this.nombre = nombre;
         this.contraseña = contraseña;
-        this.email = email;
     }
 
     public String getNombre() {
@@ -24,9 +22,6 @@ class Usuario {
         return contraseña;
     }
 
-    public String getEmail(){
-        return email;
-    }
 }
 
 public class ProyectoZAL01  {
@@ -88,34 +83,29 @@ boton2.addActionListener(new ActionListener() {
         mensLabel.setForeground(Color.WHITE);
         mensLabel.setBounds(65, 130, 200, 25); 
 
-        JLabel EmailLabel = new JLabel("Email:");
-        JLabel ContraLabel = new JLabel("Contraseña:");
         JLabel NomusuLabel = new JLabel("Usuario:");
+        JLabel ContraLabel = new JLabel("Contraseña:");
+        
 
-        JTextField EmailField = new JTextField();
-        JTextField ContraField = new JPasswordField();
         JTextField NomusuField = new JTextField();
+        JTextField ContraField = new JTextField();
+        
 
-        EmailLabel.setForeground(Color.WHITE); 
         ContraLabel.setForeground(Color.WHITE);  
         NomusuLabel.setForeground(Color.WHITE);
 
         JButton registrarButton = new JButton("Registrar");
 
-        EmailLabel.setBounds(30, 180, 80, 25);
-        EmailField.setBounds(100, 180, 150, 25);
-        ContraLabel.setBounds(30, 220, 80, 25);
-        ContraField.setBounds(100, 220, 150, 25);
-        NomusuLabel.setBounds(30, 260, 80, 25);
-        NomusuField.setBounds(100, 260, 150, 25);
+        NomusuLabel.setBounds(30, 220, 80, 25);
+        NomusuField.setBounds(100, 220, 150, 25);
+        ContraLabel.setBounds(30, 260, 80, 25);
+        ContraField.setBounds(100, 260, 150, 25);
         registrarButton.setBounds(80, 310, 120, 30);
 
         registroFrame.add(etiquetaimagen);
         registroFrame.add(mensLabel);
-        registroFrame.add(EmailLabel);
         registroFrame.add(ContraLabel);
         registroFrame.add(NomusuLabel);
-        registroFrame.add(EmailField);
         registroFrame.add(ContraField);
         registroFrame.add(NomusuField);
         registroFrame.add(registrarButton);
@@ -124,12 +114,11 @@ boton2.addActionListener(new ActionListener() {
         registrarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String email = EmailField.getText();
                 String contraseña = ContraField.getText();
                 String nombreUsuario = NomusuField.getText();
 
                 // Validar campos vacíos
-                if (email.isEmpty() || contraseña.isEmpty() || nombreUsuario.isEmpty()) {
+                if (contraseña.isEmpty() || nombreUsuario.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Por favor completa todos los campos.");
                     return;
                 }
@@ -143,7 +132,7 @@ boton2.addActionListener(new ActionListener() {
                 }
 
                 // Crear y guardar usuario en la cola
-                Usuario nuevoUsuario = new Usuario(email, contraseña, nombreUsuario);
+                Usuario nuevoUsuario = new Usuario(nombreUsuario, contraseña);
                 usuariosRegistrados.add(nuevoUsuario);
 
                 JOptionPane.showMessageDialog(null, "¡Registro exitoso!");
@@ -157,7 +146,6 @@ boton2.addActionListener(new ActionListener() {
 });
 
 
-        // Acción del botón "Iniciar sesión"
        // Acción del botón "Iniciar sesión"
 boton1.addActionListener(new ActionListener() {
     @Override
