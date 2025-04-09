@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import java.awt.*;
-=======
-import java.awt.Color;
->>>>>>> 0f4d70bcc204f295eb09720a0f63edb45f9fc2d0
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -178,21 +174,15 @@ boton1.addActionListener(new ActionListener() {
         CtraLabel.setForeground(Color.WHITE); 
 
         JButton IniciarSButton = new JButton("Iniciar");
-<<<<<<< HEAD
         JButton RegresarButton = new JButton("Regresar"); // Nuevo botón de regresar
 
-=======
->>>>>>> 0f4d70bcc204f295eb09720a0f63edb45f9fc2d0
 
         UsuaLabel.setBounds(30, 150, 80, 25);
         UsuaField.setBounds(100, 150, 150, 25);
         CtraLabel.setBounds(30, 200, 80, 25);
         CtraField.setBounds(100, 200, 150, 25);
         IniciarSButton.setBounds(80, 300, 120, 30);
-<<<<<<< HEAD
         RegresarButton.setBounds(80, 350, 120, 30); 
-=======
->>>>>>> 0f4d70bcc204f295eb09720a0f63edb45f9fc2d0
 
         InicioFrame.add(inLabel);
         InicioFrame.add(etiquetaimagen);
@@ -201,7 +191,6 @@ boton1.addActionListener(new ActionListener() {
         InicioFrame.add(UsuaField);
         InicioFrame.add(CtraField);
         InicioFrame.add(IniciarSButton);
-<<<<<<< HEAD
         InicioFrame.add(RegresarButton);
 
          // Listener del botón "Regresar"
@@ -213,8 +202,6 @@ boton1.addActionListener(new ActionListener() {
             }
         });
 
-=======
->>>>>>> 0f4d70bcc204f295eb09720a0f63edb45f9fc2d0
 
         // Listener único y funcional del botón "Iniciar"
         IniciarSButton.addActionListener(new ActionListener() {
@@ -247,8 +234,6 @@ boton1.addActionListener(new ActionListener() {
                     JButton catalogo = new JButton("Catálogo");
                     JButton ofer = new JButton("Oferta");
                     JButton mem = new JButton("Membresías");
-<<<<<<< HEAD
-                    
 
                     // Posicionamiento horizontal alineado
                     int yPosition = 150;
@@ -260,18 +245,11 @@ boton1.addActionListener(new ActionListener() {
                     catalogo.setBounds(startX, yPosition, buttonWidth, buttonHeight);
                     ofer.setBounds(startX + buttonWidth + padding, yPosition, buttonWidth, buttonHeight);
                     mem.setBounds(startX + 2*(buttonWidth + padding), yPosition, buttonWidth, buttonHeight);
-=======
-
-                    catalogo.setBounds(10, 150, 120, 30);
-                    ofer.setBounds(10, 200, 120, 30);
-                    mem.setBounds(10, 250, 120, 30);
->>>>>>> 0f4d70bcc204f295eb09720a0f63edb45f9fc2d0
 
                     InFrame.add(etiquetaimagen2);
                     InFrame.add(catalogo);
                     InFrame.add(ofer);
                     InFrame.add(mem);
-<<<<<<< HEAD
 
                     //Listener para el catalogo
                     catalogo.addActionListener(new ActionListener() {
@@ -586,9 +564,6 @@ boton1.addActionListener(new ActionListener() {
 
                     InFrame.setVisible(true);
 
-=======
-                    InFrame.setVisible(true);
->>>>>>> 0f4d70bcc204f295eb09720a0f63edb45f9fc2d0
                 } else {
                     JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos.");
                 }
@@ -596,18 +571,11 @@ boton1.addActionListener(new ActionListener() {
         });
 
         InicioFrame.setVisible(true);
-<<<<<<< HEAD
         frame.setVisible(false); // Ocultar la ventana principal al mostrar la de inicio de sesión
 
     }
 });
         // Mostrar la ventana
         frame.setVisible(true);   
-=======
-    }
-});
-        // Mostrar la ventana
-        frame.setVisible(true);     
->>>>>>> 0f4d70bcc204f295eb09720a0f63edb45f9fc2d0
     }
 }
